@@ -20,3 +20,4 @@ def add(a, b): #add 함수 이름 / a,b 파라미터(매개변수)
     return a + b
 
 print(add(1, 2))
+#test
