@@ -1,7 +1,7 @@
 print("Hello World!")
 a = 3
 if a > 1:
-    print('윤정이는 바보다')
+    print('윤정이는 예쁘다')
 print("----------------------")
 b = '''fjfj
     fj'''
