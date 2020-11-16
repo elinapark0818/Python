@@ -127,3 +127,24 @@ elif "need" in a: print("need") # a에 need가 있다면 need를 출력해라
 else: print("none") # 위 내용이 해당하는게 없다면 none을 출력해라
 # 해당하는 값이 elif "shirt" not in a: print("shirt") 이므로
 # shirt 가 출력된다.
+
+# 2 while 을 사용하여 1부터 1000까지의 자연수 중 3의 배수의 합을 구해 보자
+
+a = 0
+i = 1
+while i <= 1000:
+    if i % 3 == 0:
+        a += i
+    i += 1
+print(a)
+
+# a = 0
+# i = 1
+# while i <= 1000:
+#     if i % 3 == 0:
+#         a += i
+#     i += 1
+# print(a)
+
+
+
