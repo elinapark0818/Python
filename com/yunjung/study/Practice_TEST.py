@@ -117,27 +117,27 @@ print(b)
 print('='*10)
 
 # for while if 연습문제
-
-# 1
-a = "Life is too short, you need python"
-if "wife" in a: print("wife")  # a에 wife가 있다면 wife를 출력해라
-elif "python" in a and "you" not in a:print("python") # a에 python이 있고 you가 없다면 python을 출력해라
-elif "shirt" not in a: print("shirt") # a 에 shirt가 없다면 shirt를 출력해라
-elif "need" in a: print("need") # a에 need가 있다면 need를 출력해라
-else: print("none") # 위 내용이 해당하는게 없다면 none을 출력해라
-# 해당하는 값이 elif "shirt" not in a: print("shirt") 이므로
-# shirt 가 출력된다.
-
-# 2 while 을 사용하여 1부터 1000까지의 자연수 중 3의 배수의 합을 구해 보자
-
-a = 0
-i = 1
-while i <= 1000:
-    if i % 3 == 0:
-        a += i
-    i += 1
-print(a)
-
+#
+# # 1
+# a = "Life is too short, you need python"
+# if "wife" in a: print("wife")  # a에 wife가 있다면 wife를 출력해라
+# elif "python" in a and "you" not in a:print("python") # a에 python이 있고 you가 없다면 python을 출력해라
+# elif "shirt" not in a: print("shirt") # a 에 shirt가 없다면 shirt를 출력해라
+# elif "need" in a: print("need") # a에 need가 있다면 need를 출력해라
+# else: print("none") # 위 내용이 해당하는게 없다면 none을 출력해라
+# # 해당하는 값이 elif "shirt" not in a: print("shirt") 이므로
+# # shirt 가 출력된다.
+#
+# # 2 while 을 사용하여 1부터 1000까지의 자연수 중 3의 배수의 합을 구해 보자
+#
+# a = 0
+# i = 1
+# while i <= 1000:
+#     if i % 3 == 0:
+#         a += i
+#     i += 1
+# print(a)
+#
 # a = 0
 # i = 1
 # while i <= 1000:
@@ -146,5 +146,11 @@ print(a)
 #     i += 1
 # print(a)
 
+result = 0
+i = 1
+while i <= 1000:
+    if i % 3 == 0: # 3으로 나누어 떨어지는 수는 3의 배수
+        result += i
+    i += 1
 
-
+print(result)
