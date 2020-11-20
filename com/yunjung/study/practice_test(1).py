@@ -65,3 +65,12 @@ print('=' * 10)
 numbers = [1, 2, 3, 4, 5]
 result = [n * 2 for n in numbers if n % 2 == 1]
 print(result)
+
+print('='*10)
+
+b = 0
+i = 1
+for i in range(1, 1001): # 1~1000 까지의 정수
+    if i % 3 == 0:
+        b = b + i
+print(b)
