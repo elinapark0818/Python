@@ -58,3 +58,25 @@ firebat1.attack("5시")
 
 firebat1.damaged(25)
 firebat1.damaged(25)
+
+print('='*10)
+
+class Unit:
+    def __init__(self, name, hp):
+        Unit.__init__(self,name,hp)
+        self.damage = damage
+    def attack(self, location):
+        print("{0} : {1} 방향으로 적군을 공격합니다. [공격력 {2}" \
+              .format(self.name, location, self.damage))
+    def damaged(self, damaged):
+
+class Flyable:
+    def __init__(self, flying_speed):
+        self.flying_speed = flying_speed
+    def fly(self, name, location):
+        print("{0} : {1} 방향으로 날아갑니다. [속도 {2}"\
+              .format(name, location, self.flying_speed))
+class FlyableAttackUnit(AttackUnit, Flyable):
+    def __init__(self, name, hp, damage, flying_speed):
+        AttackUnit.__init__(self, name, hp, damage)
+        Flyable.__init__(self, flying_speed)
