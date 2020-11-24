@@ -110,3 +110,6 @@ class FlyableAttackUnit(AttackUnit, Flyable):  # 공중 공격 유닛 클래스
 
 valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
 valkyrie.fly(valkyrie.name, "3시")
+
+valkyrie2 = FlyableAttackUnit("발키리2", 200, 6, 5)
+valkyrie2.fly(valkyrie2.name, "5시")
