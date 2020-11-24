@@ -25,9 +25,22 @@ print("|\"^\"`    |")
 print("||_/=\\\\__|")
 
 print("="*10)
-#5 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+# #5 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+# A, B = input().split()
+# print(int(A) + int(B))
+# #6 A-B
+# A, B = input().split()
+# print(int(A) - int(B))
+# #7 A*B
+# A, B = input().split()
+# print(int(A) * int(B))
+# #8 A/B
+# A, B = input().split()
+# print(int(A) / int(B))
 
-A = 1
-B = 2
+#9 사칙연산
 
-print(A + B)
+a, b = input().split()
+a = int(a)
+b = int(b)
+print(a+b, a-b, a*b, int(a/b), a%b, sep = "\n")
