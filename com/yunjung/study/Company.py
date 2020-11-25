@@ -10,8 +10,8 @@
 # print("="*10)
 #
 # import sys
-# print("Python", "Jaba", file=sys.stdout)
-# print("Python", "Jaba", file=sys.stderr)
+# print("Python", "Java", file=sys.stdout)
+# print("Python", "Java", file=sys.stderr)
 
 scores = {"수학":0, "영어":50, "코딩":100}
 for subject, score in scores.items():
@@ -93,7 +93,7 @@ score_file.close()
 # score_file.close()
 
 score_file = open("score.txt", "r", encoding="utf8")
-lines = score_file.readlines() # list 형태로 저장
+lines = score_file.readlines()  # list 형태로 저장
 for line in lines:
     print(line, end="")
 

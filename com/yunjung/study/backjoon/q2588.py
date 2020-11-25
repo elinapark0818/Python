@@ -1,0 +1,10 @@
+first = input()
+second = input()
+secondList = list(second)
+firstInt = int(first)
+secondInt = int(second)
+print(firstInt * int(secondList[2]))
+print(firstInt * int(secondList[1]))
+print(firstInt * int(secondList[0]))
+print(firstInt * secondInt)
+
