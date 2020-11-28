@@ -10,4 +10,5 @@ except ValueError:
 except ZeroDivisionError as err:
     print(err)
 except:
-    print("알 수 없는 오류가 발생하였습니다.")  # 주석처리해서 그렇다
+    print("알 수 없는 오류가 발생하였습니다.") # 주석처리해서 그렇다
+    print(err)
