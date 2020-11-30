@@ -51,12 +51,12 @@ print("{0:.2f}".format(5/3)) # .2를 f앞에 입력하면 소수점 셋째에서
 
 
 
-score_file = open("score.txt", "w", encoding="utf8")
+score_file = open("../score.txt", "w", encoding="utf8")
 print("수학 : 0", file=score_file)
 print("영어 : 50", file=score_file)
 score_file.close()
 
-score_file = open("score.txt", "a", encoding="utf8")
+score_file = open("../score.txt", "a", encoding="utf8")
 score_file.write("과학 : 80")
 score_file.write("\n코딩 : 100")
 score_file.close()
@@ -92,7 +92,7 @@ score_file.close()
 #     print(line, end="")
 # score_file.close()
 
-score_file = open("score.txt", "r", encoding="utf8")
+score_file = open("../score.txt", "r", encoding="utf8")
 lines = score_file.readlines()  # list 형태로 저장
 for line in lines:
     print(line, end="")

@@ -1,23 +1,23 @@
 import pickle
-profile_file = open("profile.pickle", "wb")
+profile_file = open("../profile.pickle", "wb")
 profile = {"이름":"박엘리나", "나이":29, "취미":["등산", "요리", "코딩"]}
 print(profile)
 pickle.dump(profile, profile_file)  # profile 에 있는 정보를 file 에 저장한다
 profile_file.close()
 
-profile_file = open("profile.pickle", "rb")
+profile_file = open("../profile.pickle", "rb")
 profile = pickle.load(profile_file)  # file 에 있는 정보를 profile 에 불러온다
 print(profile)
 profile_file.close()
 
 import pickle
-with open("profile.pickle", "rb") as profile_file:
+with open("../profile.pickle", "rb") as profile_file:
     print(pickle.load(profile_file))
 
-with open("study.txt", "w", encoding="utf8") as study_file:
+with open("../study.txt", "w", encoding="utf8") as study_file:
     study_file.write("파이썬을 열심히 공부하고 있어요")
 
-with open("study.txt", "r", encoding="utf8") as study_file:
+with open("../study.txt", "r", encoding="utf8") as study_file:
     print(study_file.read())
 #
 #

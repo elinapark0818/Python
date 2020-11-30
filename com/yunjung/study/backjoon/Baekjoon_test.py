@@ -37,16 +37,10 @@ print("="*10)
 # #8 A/B
 # A, B = input().split()
 # print(int(A) / int(B))
-#
-# #9 사칙연산
-#
-# a, b = input().split()
-# a = int(a)
-# b = int(b)
-# print(a+b, a-b, a*b, int(a/b), a%b, sep = "\n")
 
+#9 사칙연산
 
-s = input()
-A, B = s.split()
-print(A + B)
-print(int(A) + int(B))
+a, b = input().split()
+a = int(a)
+b = int(b)
+print(a+b, a-b, a*b, int(a/b), a%b, sep = "\n")
