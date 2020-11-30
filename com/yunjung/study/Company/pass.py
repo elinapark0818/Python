@@ -62,3 +62,39 @@ vulture.move("11시")
 battlecruiser.move("9시")
 
 # move로 재정의 까지 해보았따!!!!!
+
+
+class BuildingUnit(Unit):
+    def __init__(self, name, hp, location):
+        Unit.__init__(self, name, hp, 0)
+        super.__init__(name, hp, 0)
+        self.location = location
+
+
+
+# 서플라이 디폿 : 건물, 1개 건물 = 8 유닛
+# supply_depot = BuildingUnit("서플라이 디폿", 500, "7시")
+#
+# def game_start():
+#     print("[알림] 새로운 게임을 시작합니다.")
+#
+# def game_over():
+#     pass
+#
+# game_start()
+# game_over()
+
+
+class Unit:
+    def __init__(self):
+        print("Unit 생성자")
+class Flyable:
+    def __init__(self):
+        print("Flyable 생성자")
+class FlyableUnit(Flyable, Unit):          #맨 마지막꺼가 적응된다
+    def __init__(self):
+        # super().__init__()
+        Unit.__init__(self)
+        Flyable.__init__(self)
+#드랍쉽
+dropship = FlyableUnit()
