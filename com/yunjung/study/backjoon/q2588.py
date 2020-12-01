@@ -7,4 +7,4 @@ print(firstInt * int(secondList[2]))
 print(firstInt * int(secondList[1]))
 print(firstInt * int(secondList[0]))
 print(firstInt * secondInt)
-#test
+#tests
