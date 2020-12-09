@@ -19,6 +19,6 @@
 # price(5)
 # price_morning(6)
 # price_Army(3)
-
+#
 from theater_module import price_Army as price    # 군인할인의 별명을 만들어줌
 price(5)
