@@ -1,4 +1,6 @@
+import time
 from selenium import webdriver
+
 browser = webdriver.Chrome('/Users/jobflexqa2.MIDASIT/PycharmProjects/chromedriver_win32/chromedriver')
 browser.implicitly_wait(3)
 browser.get('https://st-ogu59-admin-recruiter-co-kr.midasweb.net/cus/login')
@@ -28,7 +30,6 @@ browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[3]/
 
 browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[4]/td/label/select').click()  # 코드선택 셀렉박스 클릭
 
-import time
 time.sleep(2)
 
 from selenium.webdriver.support.select import Select
@@ -37,7 +38,6 @@ select.select_by_index(1)
 
 browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/td/div[2]/div[1]/label/select').click()
 
-import time
 time.sleep(2)
 
 from selenium.webdriver.support.select import Select
@@ -48,13 +48,33 @@ browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/
 
 browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/td/div[3]/span/button').click()
 
-from selenium import webdriver
-from selenium.webdriver.support.select import Select
 
-elem = browser.find_element_by_id("ReceiveStartYmd")
-browser.find_element_by_name('id').send_keys('2020.12.01')
+# 날짜 정하기
 
-elem2 = browser.find_element_by_id("ReceiveEndYmd")
-browser.find_element_by_name('id').send_keys('2020.12.31')
+# Click to open drop-down
+date = browser.find_element_by_xpath("/html/body/div[2]/div/div/form/table/tbody/tr[8]/td[1]/label[1]/input").click()
+# Choose depart date
+wait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div/form/table/tbody/tr[8]/td[1]/label[1]/input"))).click()
+# Choose return date
+wait(browser, 10).until(EC.visibility_of_element_located((By.XPATH, "/html/body/div[2]/div/div/form/table/tbody/tr[8]/td[1]/label[1]/input"))).click()
 
-browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[8]/td[2]/label[3]/input').click()
+
+
+
+datefield = browser.find_element_by_id("frm-ReceiveStartYmd")
+datefield.click()
+browser.find_element_by_id('frm-receiveStartYmd').send_keys('2020.12.01')
+
+datefield = browser.find_element_by_id("frm-ReceiveEndYmd")
+datefield.click()
+browser.find_element_by_id('frm-receiveEndYmd').send_keys('2020.12.31')
+
+
+
+
+
+
+
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[8]/td[2]/label[3]/input').click()  # 체크박스 클릭
+
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/div[2]/button').click()  # [다음] 클릭
