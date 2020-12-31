@@ -26,14 +26,14 @@ time.sleep(1)
 from selenium.webdriver.support.select import Select
 select = Select(browser.find_element_by_id('frm-recruitClassCodeSn'))
 select.select_by_index(1)
-browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/td/div[2]/div[1]/label/select').click()
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/td/div[2]/div[1]/label/select').click()  # 채용구분 제일 첫 번째꺼 선택
 
 time.sleep(1)
 
 from selenium.webdriver.support.select import Select
 select = Select(browser.find_element_by_name('depth1_1'))
 select.select_by_index(1)
-browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/td/div[2]/div[1]/ul/li[1]/label/span').click()
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/td/div[2]/div[1]/ul/li[1]/label/span').click() # 채용분야 제일 첫 번째꺼 선택
 browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[5]/td/div[3]/span/button').click()
 
 # 날짜 정하기
@@ -47,5 +47,34 @@ browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[8]/
 browser.find_element_by_xpath('/html/body/div[2]/div/div/form/div[2]/button').click()  # [다음] 클릭
 browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # 설정을 저장하시겠습니까? [확인] 클릭
 browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # 완료되었습니다 [확인] 클릭
-
 # 채용공고생성 STEP 1 완료!
+
+time.sleep(1)
+
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/div[4]/button[2]').click() # [다음] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click()  # 설정을 저장하시겠습니까? [확인] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # 저장되었습니다 [확인] 클릭
+# 채용공고생성 STEP 2 완료!
+
+time.sleep(1)
+
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/div[2]/button[3]').click() # [다음] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click()  # 설정을 저장하시겠습니까? [확인] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click()  # 지원서 가이드 작성이 완료되었습니다. [확인] 클릭
+# 채용공고생성 STEP 3 완료!
+
+time.sleep(1)
+
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/div[3]/button[2]').click() # [다음] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # 설정을 저장하시겠습니까? [확인] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # 완료되었습니다 [확인] 클릭
+# 채용공고생성 STEP 4 완료
+
+time.sleep(1)
+
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/table/tbody/tr[1]/td/label[2]/input').click() # 게시중 라디오버튼 클릭
+browser.find_element_by_xpath('/html/body/div[2]/div/div/form/div[4]/button[2]').click() # [완료] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # 지원서설정 정보를 저장하시겠습니까? [확인] 클릭
+browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click()  # 지원서설정 정보를 저장했습니다. [확인] 클릭
+
+# 채용공고 등록 완료
