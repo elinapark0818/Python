@@ -51,6 +51,32 @@ browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # �
 
 time.sleep(1)
 
+browser.find_element_by_class_name('customH3').clear()
+browser.find_element_by_class_name("customH3").send_keys("기본정보auto") # 기본정보 STEP명 변경하기
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[3]/label/span').click() # 성별 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[4]/label/span').click() # 생년월일 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[5]/label/span').click() # 영문이름 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[6]/label/span').click() # 한문이름 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[7]/label/span').click() # 희망연봉 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[8]/label/span').click() # 직전연봉 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[9]/label/span').click() # 희망직급 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[10]/label/span').click() # 입사가능일자 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[11]/label/span').click() # 지방근무가능여부 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[12]/label/span').click() # 면접가능지역 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[13]/label/span').click() # 추천인 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[14]/label/span').click() # 지원경로 활성화
+
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[15]/label/span').click() # 가점코드 활성화
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[15]/div/label[2]/span').click() # 가점코드 상세설정 클릭
+browser.find_element_by_id("countAddCode").send_keys("5") # 가점코드 수량 5 입력하기
+browser.find_element_by_xpath('//*[@id="modalBody"]/div[2]/button[1]').click() # [코드생성] 클릭
+browser.find_element_by_xpath('//*[@id="Dialog"]/div/button[1]').click() # 가점코드를 생성하시겠습니까? [확인] 클릭
+browser.find_element_by_xpath('//*[@id="Dialog"]/div/button[1]').click() # 가점코드가 생성되었습니다. [확인] 클릭
+browser.find_element_by_xpath('//*[@id="modalCancel"]').click() # [닫기] 클릭
+
+browser.find_element_by_xpath('//*[@id="wrapSetting"]/div[1]/div[16]/label/span').click() # 추가질문설정 활성화
+
+
 browser.find_element_by_xpath('/html/body/div[2]/div/div/form/div[4]/button[2]').click() # [다음] 클릭
 browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click()  # 설정을 저장하시겠습니까? [확인] 클릭
 browser.find_element_by_xpath('/html/body/div[3]/div/div/button[1]').click() # 저장되었습니다 [확인] 클릭
