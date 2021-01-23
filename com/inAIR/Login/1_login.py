@@ -1,5 +1,4 @@
 import time
-import datetime
 selectedDate = "01/01/2021"
 from selenium import webdriver
 
