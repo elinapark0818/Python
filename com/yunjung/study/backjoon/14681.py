@@ -1,18 +1,15 @@
-year = 0
+# Quadrant n (제n사분면) 찾기
+# qa = x,y 모두 양수
+# qb = x 음수 , y 양수
+# qc = x,y 모두 음수
+# qd = x 양수 , y 음수
 
-year = int(input("연도를 입력하세요(윤년계산기) : "))
-if (((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0)):
-    print("1")
-else:
-    print("0")
-# for year in range(1,4000):
+#  첫 번째 input은 x값을 입력하도록
+#  두 번째 input은 y값을 입력하도록
 
-a = int(input())
-if (a % 4 == 0 and a % 100 != 0) or a % 400 == 0:
-    print(1)
-else:
-    print(0)
+# 범위 -1000 <= x <== 1000  (x!=0)
 
+# if
 
 x = int(input("x값을 입력하세요."))
 y = int(input("y값을 입력하세요."))
